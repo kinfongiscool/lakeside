@@ -25,6 +25,7 @@
 /* html element 62.5% font-size for REM use */
 html {
 	/*font-size:62.5%;*/
+	background-color: #E4E4E4;
 }
 body {
 	font-family: 'Lato', sans-serif;
@@ -84,7 +85,7 @@ input:focus {
 	top: 0;
 	max-width:1280px;
 	width: 100%;
-	/*height: 72px;*/
+	height: 72px;
 	z-index: 10;
 	display: flex;
 	flex-direction: row;
@@ -133,8 +134,16 @@ input:focus {
 }
 /* footer */
 .footer {
-
+	background-color: #0D192D;
+	color: #325179;
 }
+.footer p {
+	margin: 0;
+}
+.footer-address {
+	margin-bottom: 1em;
+}
+
 
 /*------------------------------------*\
     PAGES
@@ -339,9 +348,10 @@ a img.aligncenter {
 }
 
 /*------------------------------------*\
-    CAROUSEL
+    FRONT PAGE
 \*------------------------------------*/
 
+/*CAROUSEL*/
 @keyframes slide {
 0% { left: 0%; }
 26% { left: 0%; }
@@ -350,6 +360,10 @@ a img.aligncenter {
 66% { left: -200%; }
 93% { left: -200%; }
 100% { left: -300%; }
+}
+div .captioned-gallery-disabled {
+	width: 100%;
+	height: 72px;
 }
 div .captioned-gallery {
   width: 100%;
@@ -372,7 +386,6 @@ figure.slider figure {
 }
 figure.slider figure .figure-overlay {
 	position: absolute;
-
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.4);
@@ -390,3 +403,39 @@ figure.slider figure figcaption {
   color: rgba(255,255,255,.2);
   font-size: 25vw;
 }
+
+/*ADDRESS*/
+.location-container {
+	display: flex;
+	width:100%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color:#EFEFEF
+}
+.location {
+	flex: 1;
+}
+.location .address {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	font-weight: normal;
+	margin: 0 0 0 0;
+}
+.location .suburb {
+	font-size: 2em;
+	color: #325179;
+}
+.location span {
+	font-size:.9em;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-style:italic;
+}
+.location .time {
+	font-weight: normal;
+}
+.map {
+	flex: 1;
+	padding: 1em;
+}
+/*MAP - must be in line, see front-page.php*/
